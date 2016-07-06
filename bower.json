@@ -1,0 +1,17 @@
+{
+  "name": "curso javascript - 1106",
+  "authors": [
+    "Guilherme Santos <ggs12@inf.ufpr.br>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

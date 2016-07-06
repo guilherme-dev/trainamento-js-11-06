@@ -1,0 +1,116 @@
+https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+http://api.jquery.com/
+--- JavaScript ---
+--- DOM --- 
+--- JQuery ---
+--- Ajax ---
+
+What is the DOM?EDIT
+The Document Object Model (DOM) is a programming interface for HTML and XML documents. It provides a structured representation of the document and it defines a way that the structure can be accessed from programs so that they can change the document structure, style and content. The DOM provides a representation of the document as a structured group of nodes and objects that have properties and methods. Essentially, it connects web pages to scripts or programming languages.
+
+A Web page is a document. This document can be either displayed in the browser window, or as the HTML source. But it is the same document in both cases. The Document Object Model (DOM) provides another way to represent, store and manipulate that same document. The DOM is a fully object-oriented representation of the web page, and it can be modified with a scripting language such as JavaScript.
+
+-- Passar um review da linguagem utilizando o guia do Luiz
+
+-- Introduzir JQuery
+
+-- JavaScript Weird -- 
+	-> First Class Functions
+		- Funções podem ser passadas como argumentos
+		
+		function add(first, second, callback){
+		console.log(first+second)
+		}
+
+		add(1,2, function(){
+		console.log('feito')
+		})
+		add(2,3)
+
+		nome(){};
+		$().click(nome);
+	-> Event Driven Environment
+		well
+
+	-> Closures
+		retains state and scope after executes  
+
+		$(function(){
+		var a = 1;
+		$().on('click', function(){
+		alert(a);
+		})
+		})
+	-> Scope
+		variable access
+
+	->context
+		valor de this
+		
+
+$(document).ready(function(){
+	//1
+	$("#panel1").hide(300).show(1000);
+	slideUp()
+	delay()
+	slideDown()
+	fadeIn()
+	fadeToggle()
+	slideToggle()
+
+	.css({color:'red', fontWeight:'bold'}); //n pode menos
+
+
+
+});
+
+
+--
+
+-- Event Binding
+	//mouseover
+	//.html();
+	$('#btn1').on('click', function(){
+		$('#panel1').toggle();
+	});
+-- Better Code
+	$('.panel-button').on('click', function(){
+		var panelId = $(this).attr('data-panelid');
+		$('#'+panelId).toggle();
+	});
+-- Dom traversal
+	find
+	parent
+	siblings
+	closest
+
+-- Ajax
+
+	AJAX is a developer's dream, because you can:
+Update a web page without reloading the page
+Request data from a server - after the page has loaded 
+Receive data from a server - after the page has loaded
+Send data to a server - in the background
+
+$(function(){
+	$.ajax({
+		type: 'get',
+		url: '',
+		success: function(data){
+		$.each(data, function(i, item){
+			$().append();
+		})
+		}
+	})
+
+		$.ajax({
+		type: 'post',
+		url: '',
+		data: order,
+		success: function(data){
+		$.each(data, function(i, item){
+			$().append();
+		})
+		}
+	})
+})
